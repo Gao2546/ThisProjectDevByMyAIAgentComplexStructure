@@ -22,10 +22,43 @@ The system consists of five main components:
 2. **Frontend (React)**: User interface for monitoring and analytics
 3. **Database (PostgreSQL)**: Data storage for sensor readings, predictions, and metadata
 4. **Models (Python/TensorFlow)**: Machine learning models for anomaly detection
+
 5. **Ollama**: LLM service for natural language analytics on sensor data
 
+## Frontend Configuration
+
+The frontend is built with React and served using Nginx, which handles client-side routing and proxies API requests to the backend service.
+
+### Nginx Configuration (frontend/nginx.conf)
+
+The Nginx server is configured to:
+
+- Listen on port 80 (mapped to external port 3002 via Docker Compose)
+- Serve the React application from `/usr/share/nginx/html`
+- Handle client-side routing by returning `index.html` for all non-API requests
+- Proxy API endpoints to the backend service running on `backend:3000`
+
+**Proxied Endpoints:**
+- `/auth/` - Authentication routes
+- `/users` - User management
+- `/machines` - Machine management
+- `/machine-types` - Machine type management
+- `/sensor-data` - Sensor data operations
+- `/predictions` - Prediction data
+- `/alerts` - Alert management
+- `/analyze-data` - LLM analytics (with extended timeouts for long-running queries)
+- `/simulate-sensor-data` - Sensor data simulation
+- `/health` - Health check
+
+**Additional Features:**
+- Gzip compression for text-based content
+- Security headers (X-Frame-Options, X-XSS-Protection, etc.)
+- CORS and content security policies
+
+This setup allows the frontend to make API calls to relative paths (e.g., `/auth/login`), which are transparently proxied to the backend.
 
 ## Quick Start
+
 
 ### Prerequisites
 - Docker and Docker Compose

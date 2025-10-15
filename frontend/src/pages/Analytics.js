@@ -79,7 +79,9 @@ const Analytics = () => {
       }
 
       const response = await axios.post('/analyze-data', payload, {
-        headers: { Authorization: `Bearer ${token}` }
+        headers: { Authorization: `Bearer ${token}`,
+        // Set a timeout of 5000 milliseconds (5 seconds)
+        timeout: 100000000 }
       });
 
       setAnalysisResult(response.data.analysis);

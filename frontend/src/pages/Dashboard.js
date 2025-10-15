@@ -17,22 +17,23 @@ const Dashboard = () => {
     return () => clearInterval(interval);
   }, []);
 
+
   const fetchDashboardData = async () => {
     try {
       const token = localStorage.getItem('token');
       const headers = { Authorization: `Bearer ${token}` };
 
+      const startDate = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+
       const [machinesRes, alertsRes, sensorRes] = await Promise.all([
         axios.get('/machines', { headers }),
         axios.get('/alerts', { headers }),
-        axios.get('/sensor-data?limit=100', { headers })
+        axios.get(`/sensor-data?start_date=${startDate}`, { headers })
       ]);
 
       setMachines(machinesRes.data);
-      setAlerts(alertsRes.data.slice(0, 5)); // Show latest 5 alerts
+      setAlerts(alertsRes.data); // Show latest 5 alerts
       setSensorData(sensorRes.data);
-      console.log(sensorRes.data);
-      console.log(alerts);
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
     } finally {
@@ -40,14 +41,17 @@ const Dashboard = () => {
     }
   };
 
+
   const activeAlerts = alerts.filter(alert => alert.status === 'active');
 
-  const chartData = sensorData.slice(-20).map(item => ({
+
+  const chartData = sensorData.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 20).map(item => ({
     time: moment(item.timestamp).format('HH:mm:ss'),
     temperature: item.temperature,
     vibration: item.vibration,
     pressure: item.pressure,
   })).sort((a, b) => a.time.localeCompare(b.time));
+
 
   console.log(chartData);
 
@@ -82,10 +86,11 @@ const Dashboard = () => {
         </Col>
       </Row>
 
-      {activeAlerts.length > 0 && (
+
+       {activeAlerts.length > 0 && (
         <div style={{ marginBottom: 24 }}>
           <h2>Active Alerts</h2>
-          {activeAlerts.map(alert => (
+          {activeAlerts.slice(0, 5).map(alert => (
             <Alert
               key={alert.id}
               message={`${alert.machine_name}: ${alert.message}`}
@@ -96,6 +101,7 @@ const Dashboard = () => {
           ))}
         </div>
       )}
+
 
 
       <Row gutter={16}>

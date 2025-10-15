@@ -4,9 +4,32 @@
 ## Overview
 This API provides endpoints for monitoring manufacturing equipment, collecting sensor data, running predictions, and managing alerts.
 
-## Authentication
-All API endpoints require JWT authentication except for `/auth/login` and `/health`.
+## Accessing the API
 
+In the Docker Compose setup, the API can be accessed in two ways:
+
+1. **Direct Backend Access**: `http://localhost:3001` (recommended for AI agents and external integrations)
+2. **Through Frontend Proxy**: `http://localhost:3002` (used by the React frontend)
+
+The frontend Nginx configuration proxies the following API paths to the backend service:
+
+**Proxied Endpoints:**
+- `/auth/` - Authentication routes
+- `/users` - User management
+- `/machines` - Machine management
+- `/machine-types` - Machine type management
+- `/sensor-data` - Sensor data operations
+- `/predictions` - Prediction data
+- `/alerts` - Alert management
+- `/analyze-data` - LLM analytics
+- `/simulate-sensor-data` - Sensor data simulation
+- `/health` - Health check
+
+This proxy setup allows the React frontend to make API calls using relative paths (e.g., `/auth/login`), which are transparently forwarded to the backend.
+
+**Note**: For AI agent integration and programmatic access, use the direct backend URL (`http://localhost:3001`). The examples in this documentation use the direct backend access.
+
+## Authentication
 
 ### Login
 ```http

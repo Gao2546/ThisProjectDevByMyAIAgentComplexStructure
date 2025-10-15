@@ -270,7 +270,7 @@ app.delete('/machine-types/:id', authenticateToken, async (req, res) => {
 // Sensor data routes
 app.get('/sensor-data', authenticateToken, async (req, res) => {
   try {
-    const { machine_id, start_date, end_date, limit = 100 } = req.query;
+    const { machine_id, start_date, end_date, limit = 1000000 } = req.query;
     let query = `
       SELECT sd.*, m.name as machine_name, mt.name as machine_type
       FROM sensor_data sd
@@ -466,7 +466,7 @@ app.post('/analyze-data', authenticateToken, async (req, res) => {
       dataQuery += ' AND ' + conditions.join(' AND ');
     }
 
-    dataQuery += ' ORDER BY sd.timestamp DESC LIMIT 1000';
+    dataQuery += ' ORDER BY sd.timestamp DESC LIMIT 10';
 
     const dataResult = await pool.query(dataQuery, params);
     const data = dataResult.rows;
@@ -487,8 +487,15 @@ app.post('/analyze-data', authenticateToken, async (req, res) => {
     }));
 
     // Call Ollama LLM
+    console.log(`Analyze the following manufacturing sensor data and answer the query: "${query}"
+
+Data:
+${JSON.stringify(formattedData, null, 2)}
+
+Please provide insights, trends, and answer the specific query.`);
+    console.log(formattedData.length);
     const llmResponse = await axios.post(`${process.env.OLLAMA_BASE_URL}/api/generate`, {
-      model: 'llama2', // or any available model
+      model: 'gemma3:4b', // or any available model
       prompt: `Analyze the following manufacturing sensor data and answer the query: "${query}"
 
 Data:
@@ -496,6 +503,7 @@ ${JSON.stringify(formattedData, null, 2)}
 
 Please provide insights, trends, and answer the specific query.`,
       stream: false,
+      timeout: 100000000,
     });
 
     res.json({ analysis: llmResponse.data.response, data_count: data.length });
