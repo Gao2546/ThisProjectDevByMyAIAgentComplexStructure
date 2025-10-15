@@ -1,0 +1,928 @@
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:24:10.005Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:15.030Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:20.037Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:25.047Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:30.061Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:35.057Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:40.069Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:45.073Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:50.082Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:24:55.089Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:00.095Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:05.105Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:10.110Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:15.121Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:20.128Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:25.131Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:30.138Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:35.144Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:40.152Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:45.161Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:50.162Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:25:55.168Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:00.177Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:05.175Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:10.184Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:15.191Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:20.195Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:25.202Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:30.211Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:35.214Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:40.221Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:45.229Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:50.236Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:26:55.241Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:00.247Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:05.254Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:10.260Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:15.265Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:20.271Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:25.280Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:30.286Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:35.288Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:40.291Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:45.299Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:50.308Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:27:55.315Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:00.322Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:05.330Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:10.329Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:15.335Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:20.341Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:25.348Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:30.354Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:35.363Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:40.368Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:45.376Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:50.381Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:28:55.384Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:00.391Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:05.399Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:10.403Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:15.410Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:20.417Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:25.424Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:30.432Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:35.434Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:40.441Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:45.450Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:50.457Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:29:55.459Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:00.462Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:05.472Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:10.477Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:15.485Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:20.486Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:25.497Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:30.500Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:35.508Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:40.514Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:45.522Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:50.530Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:30:55.536Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:31:00.546Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:31:05.552Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:31:25.859Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:31:30.881Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:31:35.888Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:31:40.889Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:32:01.417Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:05.438Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:10.445Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:15.453Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:20.461Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:25.465Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:30.469Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:35.473Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:40.487Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:45.493Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:50.499Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:32:55.510Z"}
+{"code":"28P01","file":"auth.c","length":101,"level":"error","line":"334","message":"Scheduled sensor data collection error: password authentication failed for user \"admin\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"admin\"\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:462:28)","timestamp":"2025-10-15T10:33:00.510Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:33:11.360Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:15.386Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:20.380Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:25.386Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:30.391Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:35.397Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:40.402Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:45.408Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:50.415Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:33:55.420Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:00.425Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:05.431Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:10.437Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:15.441Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:20.447Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:25.453Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:30.460Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:35.466Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:40.472Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:45.478Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:50.485Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:34:55.491Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:00.497Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:05.503Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:10.510Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:15.516Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:20.521Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:25.528Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:30.535Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:35.538Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:40.543Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:45.548Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:50.555Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:35:55.560Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:00.567Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:05.573Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:10.580Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:15.586Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:20.592Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:25.597Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:30.604Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:35.612Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:40.619Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:45.623Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:50.629Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:36:55.635Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:00.639Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:05.646Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:10.651Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:15.657Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:20.663Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:25.669Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:30.674Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:35.681Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:40.688Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:45.694Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:50.700Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:37:55.705Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:00.712Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:05.719Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:10.725Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:15.730Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:20.738Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:25.744Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:30.749Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:35.754Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:40.759Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:45.766Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:50.773Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:38:55.777Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:00.784Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:05.791Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:10.797Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:15.802Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:20.810Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:25.817Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:30.823Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:35.829Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:40.835Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:39:45.840Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:40:21.655Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:25.691Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:30.687Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:35.691Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:40.700Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:45.708Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:50.713Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:40:55.718Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:00.725Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:05.731Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:10.738Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:15.741Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:20.749Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:25.753Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:30.758Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:35.765Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:40.770Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:45.776Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:50.783Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:41:55.788Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:00.795Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:05.804Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:10.811Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:15.819Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:20.822Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:25.828Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:30.834Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:35.841Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:40.849Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:45.856Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:50.862Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:42:55.868Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:00.874Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:05.880Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:10.887Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:15.893Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:20.899Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:25.905Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:30.909Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:35.918Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:40.923Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:45.930Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:50.938Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:43:55.942Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:00.947Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:05.955Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:10.961Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:15.967Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:20.974Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:25.981Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:30.988Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:35.994Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:40.999Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:45.004Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:50.009Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:44:55.016Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:00.023Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:05.027Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:10.032Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:15.039Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:20.044Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:25.048Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:30.054Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:35.062Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:40.066Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:45.074Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:50.080Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:45:55.085Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:00.091Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:05.096Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:10.102Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:15.109Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:20.115Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:25.123Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:30.128Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:35.135Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:40.141Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:45.146Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:50.153Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:46:55.159Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:00.166Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:05.172Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:10.179Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:15.186Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:20.193Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:25.199Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:30.205Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:35.211Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:40.218Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:45.225Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:50.230Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:47:55.235Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:00.242Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:05.248Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:10.253Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:15.259Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:20.263Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:25.269Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:30.275Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:35.281Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:40.287Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:45.292Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:50.298Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:48:55.304Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:00.311Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:05.318Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:10.323Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:15.330Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:20.336Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:25.342Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:30.349Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:35.356Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:40.363Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:45.370Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:50.375Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:49:55.380Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:50:00.385Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:50:05.391Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:50:10.399Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:50:46.844Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:50:50.872Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:50:55.867Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:00.874Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:05.879Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:10.884Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:15.891Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:20.897Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:25.904Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:30.910Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:35.916Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:40.924Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:45.930Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:50.934Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:51:55.942Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:53:07.899Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:10.940Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:15.923Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:20.926Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:25.933Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:30.940Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:35.946Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:40.951Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:45.959Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:50.966Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:53:55.971Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:00.976Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:05.981Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:10.985Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:15.991Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:20.997Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:25.001Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:30.008Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:35.013Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:40.019Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:45.025Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:50.030Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:54:55.038Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:00.045Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:05.051Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:10.057Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:15.063Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:20.069Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:25.077Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:30.083Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:35.090Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:40.095Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:45.101Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:50.108Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:55:55.114Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:56:00.120Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:56:05.127Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:56:10.134Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T10:56:48.594Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:56:50.628Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:56:55.612Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:00.617Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:05.624Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:10.630Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:15.636Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:20.643Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:25.649Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:30.657Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:35.664Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:40.670Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:45.676Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:50.681Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:57:55.688Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:00.693Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:05.698Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:10.703Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:15.710Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:20.715Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:25.720Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:30.726Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:35.730Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:40.736Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:45.742Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:50.748Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:58:55.753Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:00.759Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:05.766Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:10.771Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:15.777Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:20.784Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:25.790Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:30.796Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:35.801Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:40.806Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:45.814Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:50.819Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T10:59:55.827Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:00.834Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:05.839Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:10.847Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:15.854Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:20.859Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:25.866Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:30.872Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:00:35.879Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:00:44.511Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"postgres","level":"error","message":"Scheduled sensor data collection error: getaddrinfo ENOTFOUND postgres","stack":"Error: getaddrinfo ENOTFOUND postgres\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:464:28)","syscall":"getaddrinfo","timestamp":"2025-10-15T11:00:45.632Z"}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"postgres","level":"error","message":"Scheduled sensor data collection error: getaddrinfo ENOTFOUND postgres","stack":"Error: getaddrinfo ENOTFOUND postgres\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:464:28)","syscall":"getaddrinfo","timestamp":"2025-10-15T11:00:50.541Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:00:57.220Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:00.247Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:05.239Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:10.243Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:15.247Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:20.255Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:25.259Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:30.267Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:35.271Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:40.276Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:45.282Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:50.289Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:01:55.295Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:00.299Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:05.306Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:10.312Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:15.316Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:20.322Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:25.326Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:30.330Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:35.336Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:40.343Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:45.348Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:50.355Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:02:55.362Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:00.367Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:05.374Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:10.378Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:15.386Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:20.392Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:25.398Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:30.402Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:35.410Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:40.417Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:45.422Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:50.428Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:03:55.436Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:00.442Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:05.449Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:10.455Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:15.462Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:20.468Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:25.474Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:30.480Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:35.487Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:40.494Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:45.500Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:04:50.506Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:05:01.217Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:05.238Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:10.233Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:15.238Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:20.247Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:25.253Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:30.260Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:35.267Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:40.271Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:45.276Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:50.282Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:05:55.287Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:00.294Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:05.299Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:10.306Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:15.312Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:20.314Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:25.322Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:30.329Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:35.334Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:40.339Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:45.345Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:50.352Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:06:55.357Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:00.363Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:05.369Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:10.373Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:15.381Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:20.386Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:25.391Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:30.397Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:35.403Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:40.410Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:45.417Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:50.424Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:07:55.430Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:00.436Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:05.442Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:10.448Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:15.453Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:20.459Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:25.465Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:30.473Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:35.476Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:40.482Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:45.488Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:50.493Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:08:55.499Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:00.505Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:05.512Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:10.518Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:15.522Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:20.530Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:25.536Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:30.543Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:35.548Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:40.555Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:45.561Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:50.567Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:09:55.572Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:00.581Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:05.585Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:10.591Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:15.598Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:20.604Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:25.609Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:30.615Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:35.621Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:40.627Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:45.633Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:50.639Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:10:55.644Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:00.650Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:05.656Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:10.661Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:15.666Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:20.671Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:25.677Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:30.684Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:35.689Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:40.695Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:45.701Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:50.708Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:11:55.714Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:00.720Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:05.726Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:10.732Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:15.737Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:20.743Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:25.749Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:30.755Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:35.760Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:40.765Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:45.772Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:50.778Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:12:55.785Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:00.791Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:05.796Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:10.803Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:15.808Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:20.815Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:25.822Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:30.828Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:35.835Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:40.840Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:45.847Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:50.853Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:13:55.859Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:00.865Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:05.872Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:10.878Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:15.885Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:20.892Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:25.897Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:30.905Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:35.909Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:40.914Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:45.922Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:50.929Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:14:55.934Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:00.940Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:05.947Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:10.955Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:15.961Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:20.969Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:25.977Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:30.982Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:35.989Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:40.994Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:46.000Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:50.005Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:15:55.011Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:00.017Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:05.024Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:10.031Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:15.035Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:20.042Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:25.049Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:30.055Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:35.061Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:40.066Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:45.073Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:50.080Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:16:55.086Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:00.093Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:05.099Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:10.104Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:15.111Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:20.115Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:25.123Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:30.129Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:35.134Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:40.139Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:17:45.146Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:18:14.985Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:16.007Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:21.000Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:25.007Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:30.013Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:35.019Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:40.028Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:45.034Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:50.041Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:18:55.049Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:00.055Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:05.061Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:10.068Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:15.072Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:20.077Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:25.086Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:30.091Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:35.098Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:40.103Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:45.108Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:50.115Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:19:55.122Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:00.128Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:05.136Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:10.143Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:15.148Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:20.153Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:25.159Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:30.164Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:35.169Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:40.174Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:45.181Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:50.186Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:20:55.194Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:00.201Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:05.208Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:10.214Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:15.219Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:20.225Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:25.231Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:30.238Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:35.243Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:40.249Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:45.254Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:50.260Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:21:55.265Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:00.271Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:05.278Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:10.283Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:15.288Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:20.294Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:25.299Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:30.306Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:35.312Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:40.319Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:45.325Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:50.331Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:22:55.339Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:00.344Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:05.349Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:10.355Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:15.361Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:20.366Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:25.374Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:30.380Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:35.388Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:40.397Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:45.402Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:50.410Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:23:55.416Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:00.424Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:05.431Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:10.438Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:15.445Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:20.452Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:25.459Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:30.467Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:35.473Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:40.482Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:45.488Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:50.495Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:24:55.501Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:00.508Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:05.515Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:10.522Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:15.530Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:20.535Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:25.543Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:30.548Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:35.555Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:40.561Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:45.568Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:50.575Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:25:55.582Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:00.588Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:05.595Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:10.603Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:15.609Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:20.616Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:25.621Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:30.627Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:35.632Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:40.638Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:45.643Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:50.649Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:26:55.654Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:00.659Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:05.666Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:10.672Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:15.677Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:20.683Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:25.690Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:30.697Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:35.703Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:40.710Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:45.714Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:50.720Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:27:55.726Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:00.732Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:05.739Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:10.745Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:15.750Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:20.755Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:25.761Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:30.766Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:35.772Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:40.779Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:45.785Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:50.792Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:28:55.796Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:00.802Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:05.807Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:10.815Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:15.821Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:20.827Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:25.834Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:30.840Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:35.847Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:40.854Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:45.859Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:50.866Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:29:55.871Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:00.876Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:05.883Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:10.888Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:15.895Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:20.902Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:25.910Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:30.917Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:30:39.931Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:40.953Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:45.951Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:50.956Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:30:55.960Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:00.966Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:05.974Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:10.979Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:15.985Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:20.991Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:25.999Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:30.003Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:35.009Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:40.016Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:45.023Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:50.028Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:31:55.034Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:00.041Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:05.047Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:10.054Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:15.061Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:20.066Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:25.071Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:30.078Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:35.084Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:40.088Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:45.092Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:50.099Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:32:55.106Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:00.112Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:05.117Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:10.123Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:15.129Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:20.136Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:25.141Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:30.146Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:33:35.151Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:33:40.160Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:33:45.174Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:33:50.181Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:33:58.142Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:00.163Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:05.166Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:10.176Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:15.181Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:20.189Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:25.195Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:30.199Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:35.207Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:40.206Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:45.217Z"}
+{"code":"42P01","file":"parse_relation.c","length":107,"level":"error","line":"1392","message":"Scheduled sensor data collection error: relation \"machines\" does not exist","name":"error","position":"16","routine":"parserOpenTable","severity":"ERROR","stack":"error: relation \"machines\" does not exist\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Task._execution (/app/server.js:465:28)","timestamp":"2025-10-15T11:34:50.224Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:35:35.449Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:35:40.473Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:35:45.468Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:35:50.473Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:35:55.479Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:00.485Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:05.490Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:10.495Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:15.503Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:20.510Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:25.515Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:30.521Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:35.526Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:40.530Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:45.537Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:50.544Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:36:55.551Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:00.556Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:05.561Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:10.568Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:15.574Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:20.580Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:25.586Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:30.593Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:35.599Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:40.604Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:45.609Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:50.617Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:37:55.622Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:00.628Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:05.633Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:10.639Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:15.645Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:20.651Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:25.656Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:30.663Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:35.670Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:38:40.674Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2025-10-15T11:41:43.480Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:41:45.497Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:41:50.493Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:41:55.502Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:00.505Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:05.511Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:10.519Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:15.523Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:20.529Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:25.535Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:30.538Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:35.544Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:40.550Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:45.555Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:50.562Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:42:55.568Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:00.574Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:05.580Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:10.584Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:15.588Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:20.594Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:25.598Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:30.602Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:35.609Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:40.615Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:45.620Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:50.627Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:43:55.633Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:00.638Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:05.643Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:10.647Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:15.651Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:20.655Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:25.661Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:30.667Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:35.671Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:40.677Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:45.681Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:50.685Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:44:55.691Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:00.696Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:05.702Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:10.707Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:15.714Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:20.719Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:25.726Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:30.732Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:35.738Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:40.746Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:45.751Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:50.755Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:45:55.762Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:00.768Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:05.776Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:10.780Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:15.785Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:20.791Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:25.796Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:30.802Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:35.806Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:40.812Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:45.817Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:50.823Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:46:55.830Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:00.836Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:05.842Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:10.848Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:15.854Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:20.860Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:25.866Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:30.872Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:35.878Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:40.884Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:45.887Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:50.892Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:47:55.899Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:00.904Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:05.910Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:10.915Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:15.920Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:20.926Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:25.931Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:30.940Z"}
+{"level":"info","message":"Collected sensor data for 0 machines","timestamp":"2025-10-15T11:48:35.943Z"}
