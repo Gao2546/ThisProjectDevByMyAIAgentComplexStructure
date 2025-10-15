@@ -16,13 +16,15 @@ services:
     networks:
       - manufacturing_network
 
+
   backend:
     build: ./backend
     ports:
       - "3001:3000"
     environment:
       - DATABASE_URL=postgresql://admin:securepassword@postgres:5432/manufacturing_db
-      - NODE_ENV=production
+      - NODE_ENV=development
+      - PORT=3000
     depends_on:
       - postgres
     volumes:
@@ -32,6 +34,7 @@ services:
       - manufacturing_network
 
   frontend:
+
     build: ./frontend
     ports:
       - "3002:80"

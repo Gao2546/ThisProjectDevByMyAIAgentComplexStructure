@@ -81,14 +81,18 @@ docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=securepassword p
 docker exec -i postgres psql -U postgres < database/init.sql
 ```
 
+
 #### Model Training
 ```bash
 cd models
+python3 -m venv env
+source env/bin/activate
 pip install -r requirements.txt
 python train_model.py --machine_type pump
 python train_model.py --machine_type motor
 python train_model.py --machine_type conveyor
 ```
+
 
 ## API Usage
 

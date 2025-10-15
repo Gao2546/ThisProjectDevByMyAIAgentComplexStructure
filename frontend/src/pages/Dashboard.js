@@ -31,6 +31,8 @@ const Dashboard = () => {
       setMachines(machinesRes.data);
       setAlerts(alertsRes.data.slice(0, 5)); // Show latest 5 alerts
       setSensorData(sensorRes.data);
+      console.log(sensorRes.data);
+      console.log(alerts);
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
     } finally {
@@ -39,12 +41,15 @@ const Dashboard = () => {
   };
 
   const activeAlerts = alerts.filter(alert => alert.status === 'active');
+
   const chartData = sensorData.slice(-20).map(item => ({
     time: moment(item.timestamp).format('HH:mm:ss'),
     temperature: item.temperature,
     vibration: item.vibration,
     pressure: item.pressure,
-  }));
+  })).sort((a, b) => a.time.localeCompare(b.time));
+
+  console.log(chartData);
 
   if (loading) {
     return <Spin size="large" style={{ display: 'block', margin: '50px auto' }} />;
@@ -92,24 +97,32 @@ const Dashboard = () => {
         </div>
       )}
 
+
       <Row gutter={16}>
         <Col span={24}>
           <Card title="Sensor Trends (Last 20 Readings)" style={{ height: 400 }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="time" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="temperature" stroke="#8884d8" name="Temperature (°C)" />
-                <Line type="monotone" dataKey="vibration" stroke="#82ca9d" name="Vibration" />
-                <Line type="monotone" dataKey="pressure" stroke="#ffc658" name="Pressure" />
-              </LineChart>
-            </ResponsiveContainer>
+            {chartData.length > 0 ? (
+              <ResponsiveContainer width="100%" height={350}>
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="time" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line type="monotone" dataKey="temperature" stroke="#8884d8" name="Temperature (°C)" />
+                  <Line type="monotone" dataKey="vibration" stroke="#82ca9d" name="Vibration" />
+                  <Line type="monotone" dataKey="pressure" stroke="#ffc658" name="Pressure" />
+                </LineChart>
+              </ResponsiveContainer>
+            ) : (
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                <p>No sensor data available to display the graph. Please ensure the backend is running and data is being collected.</p>
+              </div>
+            )}
           </Card>
         </Col>
       </Row>
+
     </div>
   );
 };

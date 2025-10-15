@@ -19,9 +19,11 @@ dotenv.config();
 
 const app = express();
 app.set('trust proxy', 1);
-const PORT = process.env.PORT || 3000;
+
+const PORT = process.env.PORT || 5000;
 
 
+console.log("starting");
 // Database connection
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -53,11 +55,21 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware to disable caching for all API responses
+const noCache = (req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+};
+
+
 // Rate limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  windowMs: 60 * 60 * 1000, // 60 minutes
+  max: 1000, // limit each IP to 1000 requests per windowMs
 });
+
 app.use(limiter);
 
 // Authentication middleware
@@ -68,7 +80,10 @@ const authenticateToken = (req, res, next) => {
   if (!token) return res.sendStatus(401);
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
+    if (err) {
+      console.log("no token")
+      return res.sendStatus(403);
+    }
     req.user = user;
     next();
   });
@@ -84,11 +99,14 @@ const sensorDataSchema = Joi.object({
   rotational_speed: Joi.number().required(),
 });
 
+
 const machineSchema = Joi.object({
   machine_type_id: Joi.number().integer().required(),
   name: Joi.string().required(),
   location: Joi.string().optional(),
+  status: Joi.string().valid('active', 'inactive').optional().default('active'),
 });
+
 
 // Routes
 
@@ -133,12 +151,42 @@ app.post('/auth/register', authenticateToken, async (req, res) => {
     logger.error('Registration error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+
 });
+
+
+// GET users
+app.get('/users', authenticateToken, async (req, res) => {
+  console.log('GET /users called by user:', req.user);
+  logger.error(`User role is not Admin: ${req.user.role}`);
+  if (req.user.role !== 'Admin') {
+    console.log('User role is not Admin:', req.user.role);
+    logger.error(`User role is not Admin: ${req.user.role}`);
+    return res.sendStatus(403);
+  }
+
+  try {
+    const result = await pool.query('SELECT id, username, email, role, created_at FROM users');
+    
+    // FIX: Set headers to prevent caching
+    res.set('Cache-Control', 'no-store'); 
+    
+    res.json(result.rows);
+  } catch (error) {
+
+    console.log('Error fetching users:', error);
+    logger.error('Get users error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 
 // Machine management
 app.get('/machines', authenticateToken, async (req, res) => {
   try {
     const result = await pool.query(`
+
       SELECT m.*, mt.name as machine_type_name
       FROM machines m
       JOIN machine_types mt ON m.machine_type_id = mt.id
@@ -157,17 +205,21 @@ app.post('/machines', authenticateToken, async (req, res) => {
     const { error } = machineSchema.validate(req.body);
     if (error) return res.status(400).json({ error: error.details[0].message });
 
-    const { machine_type_id, name, location } = req.body;
+    const { machine_type_id, name, location, status = 'active' } = req.body;
+
     const result = await pool.query(
-      'INSERT INTO machines (machine_type_id, name, location) VALUES ($1, $2, $3) RETURNING *',
-      [machine_type_id, name, location]
+      'INSERT INTO machines (machine_type_id, name, location, status) VALUES ($1, $2, $3, $4) RETURNING *',
+      [machine_type_id, name, location, status]
     );
+
+
     res.status(201).json(result.rows[0]);
   } catch (error) {
     logger.error('Create machine error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 // Machine types
 app.get('/machine-types', authenticateToken, async (req, res) => {
@@ -180,6 +232,7 @@ app.get('/machine-types', authenticateToken, async (req, res) => {
   }
 });
 
+// POST machine type
 app.post('/machine-types', authenticateToken, async (req, res) => {
   if (req.user.role !== 'Admin') return res.sendStatus(403);
 
@@ -195,6 +248,24 @@ app.post('/machine-types', authenticateToken, async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
+// DELETE machine type
+app.delete('/machine-types/:id', authenticateToken, async (req, res) => {
+  if (req.user.role !== 'Admin') return res.sendStatus(403);
+
+  try {
+    const { id } = req.params;
+    const result = await pool.query('DELETE FROM machine_types WHERE id = $1 RETURNING *', [id]);
+    if (result.rows.length === 0) return res.status(404).json({ error: 'Machine type not found' });
+    res.json({ message: 'Machine type deleted' });
+  } catch (error) {
+    logger.error('Delete machine type error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
+
 
 // Sensor data routes
 app.get('/sensor-data', authenticateToken, async (req, res) => {
@@ -232,6 +303,8 @@ app.get('/sensor-data', authenticateToken, async (req, res) => {
     params.push(limit);
 
     const result = await pool.query(query, params);
+    // console.log(result);
+    // console.log(result.rows);
     res.json(result.rows);
   } catch (error) {
     logger.error('Get sensor data error:', error);
@@ -460,9 +533,10 @@ async function createAlert(machineId, type, message, severity) {
 
 // Scheduled sensor data collection (every 5 seconds)
 cron.schedule('*/5 * * * * *', async () => {
-  try {
-    // Get all active machines
-    const machinesResult = await pool.query('SELECT id FROM machines WHERE status = $1', ['active']);
+  try{
+    // Get all machines
+    const machinesResult = await pool.query('SELECT id FROM machines');
+
     const machines = machinesResult.rows;
 
     for (const machine of machines) {

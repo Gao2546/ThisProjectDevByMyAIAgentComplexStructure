@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Card, Form, Input, Button, Select, Switch, message, Row, Col, Table, Modal, InputNumber } from 'antd';
+import { Card, Form, Input, Button, Select, Switch, message, Row, Col, Table, Modal, InputNumber, Space } from 'antd';
 import axios from 'axios';
+
 
 const { Option } = Select;
 
@@ -15,26 +15,57 @@ const Settings = () => {
   const [userForm] = Form.useForm();
   const [typeForm] = Form.useForm();
 
+
   useEffect(() => {
     fetchData();
+    const handleStorageChange = () => {
+      fetchData();
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
+
+
 
   const fetchData = async () => {
     try {
       const token = localStorage.getItem('token');
       const headers = { Authorization: `Bearer ${token}` };
 
-      const [typesRes, usersRes] = await Promise.all([
-        axios.get('/machine-types', { headers }),
-        axios.get('/users', { headers })
-      ]);
 
-      setMachineTypes(typesRes.data);
-      setUsers(usersRes.data);
-    } catch (error) {
+      // Fetch users
+      try {
+        const usersRes = await axios.get('/users', { headers });
+        console.log(usersRes);
+        // FIX 2: Check if the data is nested, e.g., usersRes.data.users
+        const userData = usersRes.data.users || usersRes.data; // Handles nested or direct array
+        console.log(userData);
+        setUsers(Array.isArray(userData) ? userData : []);
+      } catch (error) {
+        console.error('Failed to fetch users:', error);
+        setUsers([]);
+      }
+
+
+      // Fetch machine types
+      try {
+        const typesRes = await axios.get('/machine-types', { headers });
+        console.log(typesRes);
+        setMachineTypes(Array.isArray(typesRes.data) ? typesRes.data : []);
+      } catch (error) {
+        console.error('Failed to fetch machine types:', error);
+        setMachineTypes([]);
+      }
+
+      }
+     catch (error) {
       message.error('Failed to fetch settings data');
     }
   };
+
+
 
   const handleAddMachineType = async () => {
     try {
@@ -52,6 +83,47 @@ const Settings = () => {
       message.error('Failed to add machine type');
     }
   };
+
+  const handleEditMachineType = async (record) => {
+    setEditingType(record);
+    typeForm.setFieldsValue(record);
+    setIsModalVisible(true);
+  };
+
+  const handleUpdateMachineType = async () => {
+    try {
+      const values = await typeForm.validateFields();
+      const token = localStorage.getItem('token');
+
+      // Use the correct identifier for the editingType object
+      const machineTypeId = editingType.id || editingType._id;
+      await axios.put(`/machine-types/${machineTypeId}`, values, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+
+      message.success('Machine type updated successfully');
+      setIsModalVisible(false);
+      setEditingType(null);
+      typeForm.resetFields();
+      fetchData();
+    } catch (error) {
+      message.error('Failed to update machine type');
+    }
+  };
+
+  const handleDeleteMachineType = async (id) => {
+    try {
+      const token = localStorage.getItem('token');
+      await axios.delete(`/machine-types/${id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      message.success('Machine type deleted successfully');
+      fetchData();
+    } catch (error) {
+      message.error('Failed to delete machine type');
+    }
+  };
+
 
   const handleAddUser = async () => {
     try {
@@ -92,8 +164,9 @@ const Settings = () => {
         return;
       }
 
+      const machineId = activeMachines[0].id || activeMachines[0]._id;
       await axios.post('/simulate-sensor-data', {
-        machine_id: activeMachines[0].id
+        machine_id: machineId
       }, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -105,6 +178,7 @@ const Settings = () => {
       setLoading(false);
     }
   };
+
 
   const machineTypeColumns = [
     {
@@ -123,7 +197,23 @@ const Settings = () => {
       key: 'created_at',
       render: (timestamp) => new Date(timestamp).toLocaleDateString(),
     },
+    {
+      title: 'Actions',
+      key: 'actions',
+      render: (_, record) => (
+        <Space>
+          <Button type="link" onClick={() => handleEditMachineType(record)}>
+            Edit
+          </Button>
+          <Button type="link" danger onClick={() => handleDeleteMachineType(record.id || record._id)}>
+            Delete
+          </Button>
+        </Space>
+      ),
+    },
   ];
+
+
 
   const userColumns = [
     {
@@ -180,14 +270,39 @@ const Settings = () => {
               </Form.Item>
             </Form>
 
+
             <Table
               columns={machineTypeColumns}
               dataSource={machineTypes}
-              rowKey="id"
+              rowKey={(record) => record.id || record._id} // FIX 1: Robust rowKey
               size="small"
               pagination={false}
             />
-          </Card>
+
+            <Modal
+              title={editingType ? 'Edit Machine Type' : 'Add Machine Type'}
+              open={isModalVisible}
+              onOk={editingType ? handleUpdateMachineType : handleAddMachineType}
+              onCancel={() => {
+                setIsModalVisible(false);
+                setEditingType(null);
+                typeForm.resetFields();
+              }}
+            >
+              <Form form={typeForm} layout="vertical">
+                <Form.Item
+                  name="name"
+                  label="Machine Type Name"
+                  rules={[{ required: true, message: 'Please input machine type name' }]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item name="description" label="Description">
+                  <Input />
+                </Form.Item>
+              </Form>
+            </Modal>
+            </Card>
         </Col>
 
         <Col span={12}>
@@ -243,7 +358,7 @@ const Settings = () => {
             <Table
               columns={userColumns}
               dataSource={users}
-              rowKey="id"
+              rowKey={(record) => record.id || record._id} // FIX 1: Robust rowKey
               size="small"
               pagination={false}
             />
@@ -290,6 +405,6 @@ const Settings = () => {
       </Row>
     </div>
   );
-};
+}
 
 export default Settings;
