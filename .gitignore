@@ -285,6 +285,10 @@ Thumbs.db
 *.log
 logs/
 
+#models
+*.pkl
+*.h5
+
 # Environment
 .env
 .env.local

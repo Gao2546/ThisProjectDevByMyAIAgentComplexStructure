@@ -10,9 +10,10 @@ const dotenv = require('dotenv');
 const Joi = require('joi');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const axios = require('axios');
-const fs = require('fs');
+
+const { spawn } = require('child_process');
 const path = require('path');
+
 
 dotenv.config();
 
@@ -513,17 +514,53 @@ Please provide insights, trends, and answer the specific query.`,
   }
 });
 
+
 // Helper functions
 async function callPredictionModel(sensorData, machineType) {
-  // This is a placeholder. In a real implementation, you'd load and run the appropriate model
-  // For now, we'll simulate a prediction
-  const anomaly = Math.random() > 0.8; // 20% chance of anomaly
-  return {
-    result: { anomaly, predicted_value: sensorData.temperature + Math.random() * 5 },
-    confidence: Math.random(),
-    model_version: `v1.0_${machineType}`,
-  };
+  return new Promise((resolve, reject) => {
+    const scriptPath = path.join(__dirname, '../models/predict.py');
+    const pythonProcess = spawn('/opt/venv/python3', [scriptPath, JSON.stringify(sensorData), machineType]);
+
+    let stdout = '';
+    let stderr = '';
+
+    pythonProcess.stdout.on('data', (data) => {
+      stdout += data.toString();
+    });
+
+    pythonProcess.stderr.on('data', (data) => {
+      stderr += data.toString();
+    });
+
+    pythonProcess.on('close', (code) => {
+      if (code === 0) {
+        try {
+          const result = JSON.parse(stdout.trim());
+          resolve({
+            result: {
+              anomaly: result.anomaly,
+              predicted_value: result.predicted_value
+            },
+            confidence: result.confidence,
+            model_version: result.model_version,
+          });
+        } catch (parseError) {
+          logger.error('Error parsing prediction result:', parseError);
+          reject(new Error('Failed to parse prediction result'));
+        }
+      } else {
+        logger.error('Prediction script error:', stderr);
+        reject(new Error(`Prediction script failed: ${stderr}`));
+      }
+    });
+
+    pythonProcess.on('error', (error) => {
+      logger.error('Error running prediction script:', error);
+      reject(error);
+    });
+  });
 }
+
 
 async function createAlert(machineId, type, message, severity) {
   try {

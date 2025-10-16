@@ -139,15 +139,25 @@ def predict_anomaly(sensor_data, machine_type, recent_history=None):
     predictor = ModelPredictor()
     return predictor.predict(sensor_data, machine_type, recent_history)
 
-if __name__ == "__main__":
-    # Example usage
-    sample_data = {
-        'vibration': 2.5,
-        'temperature': 28.0,
-        'pressure': 2.1,
-        'flow_rate': 15.5,
-        'rotational_speed': 1520.0
-    }
 
-    result = predict_anomaly(sample_data, 'pump')
-    print("Prediction result:", result)
+if __name__ == "__main__":
+    import sys
+    import json
+    
+    if len(sys.argv) > 2:
+        sensor_data = json.loads(sys.argv[1])
+        machine_type = sys.argv[2]
+        result = predict_anomaly(sensor_data, machine_type)
+        print(json.dumps(result))
+    else:
+        # Example usage
+        sample_data = {
+            'vibration': 2.5,
+            'temperature': 28.0,
+            'pressure': 2.1,
+            'flow_rate': 15.5,
+            'rotational_speed': 1520.0
+        }
+    
+        result = predict_anomaly(sample_data, 'pump')
+        print("Prediction result:", result)
