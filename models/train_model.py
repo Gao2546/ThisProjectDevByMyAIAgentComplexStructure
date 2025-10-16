@@ -2,14 +2,15 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.metrics import accuracy_score, classification_report # Changed metrics for classification
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten, Dropout # Added Flatten
+from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 import joblib
 import os
 import argparse
+import sys # Added sys for argument parsing note
 
 def generate_sample_data(machine_type, n_samples=10000):
     """Generate sample time series data for different machine types"""
@@ -79,28 +80,16 @@ def generate_sample_data(machine_type, n_samples=10000):
 
     return pd.DataFrame(data)
 
-def create_sequences(data, seq_length=50):
-    """Create sequences for model input"""
-    sequences = []
-    targets = []
-
-    # Iterate through the data to create overlapping sequences
-    for i in range(len(data) - seq_length):
-        seq = data[i:i+seq_length, :-1]  # All columns except anomaly
-        target = data[i+seq_length, -1]  # Anomaly label at the prediction step
-        sequences.append(seq)
-        targets.append(target)
-
-    return np.array(sequences), np.array(targets)
+# NOTE: The create_sequences function is REMOVED as we are moving to [batch, data] input.
 
 def build_dnn_model(input_shape):
-    """Build a classical Deep Neural Network (DNN) model for anomaly detection
-       It uses a Flatten layer to handle the sequence input structure."""
+    """Build a classical Deep Neural Network (DNN) model for anomaly detection.
+       It is configured for [batch, features] input."""
     
-    # Input shape is (seq_length, n_features). Flatten converts this to (seq_length * n_features)
+    # Input shape is (n_features,)
     model = Sequential([
-        Flatten(input_shape=input_shape), # Flattens the time sequences into a single feature vector
-        Dense(128, activation='relu'),
+        # The first Dense layer automatically handles the input shape (features)
+        Dense(128, activation='relu', input_shape=input_shape), 
         Dropout(0.3),
         Dense(64, activation='relu'),
         Dropout(0.3),
@@ -111,36 +100,31 @@ def build_dnn_model(input_shape):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     return model
 
-def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
-    """Train model for specific machine type"""
-    print(f"Training DNN model for {machine_type}...")
+def train_model(machine_type, seq_length=1, epochs=50, batch_size=32):
+    """Train model for specific machine type using single-sample input [batch, features]"""
+    print(f"Training DNN model for {machine_type} with [batch, features] input...")
 
     # Generate sample data
     data = generate_sample_data(machine_type)
 
-    # Prepare features
-    features = ['vibration', 'temperature', 'pressure', 'flow_rate', 'rotational_speed', 'anomaly']
-    data_values = data[features].values
+    # Prepare features and target
+    features = ['vibration', 'temperature', 'pressure', 'flow_rate', 'rotational_speed']
+    target = 'anomaly'
 
-    # Create sequences
-    X, y = create_sequences(data_values, seq_length)
+    X = data[features].values
+    y = data[target].values
+    
+    # Split data (standard train/test split for classification)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
-    # Split data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # --- Scaling Features (Applied across features in the sequence) ---
+    # --- Scaling Features (Applied to standard 2D array [n_samples, n_features]) ---
     scaler = StandardScaler()
-    # Reshape (n_samples, seq_length, n_features) -> (n_samples * seq_length, n_features) for scaling
-    X_train_reshaped = X_train.reshape(-1, X_train.shape[2])
-    X_test_reshaped = X_test.reshape(-1, X_test.shape[2])
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    # --------------------------------------------------------------------------------
 
-    X_train_scaled = scaler.fit_transform(X_train_reshaped).reshape(X_train.shape)
-    X_test_scaled = scaler.transform(X_test_reshaped).reshape(X_test.shape)
-    # -----------------------------------------------------------------
-
-    # Build model using the new DNN architecture
-    # Input shape is (seq_length, n_features - 1) for the Flatten layer
-    input_shape = (seq_length, X.shape[2])
+    # Build model. Input shape is (n_features,)
+    input_shape = (X_train_scaled.shape[1],)
     model = build_dnn_model(input_shape)
 
     # Callbacks
@@ -148,9 +132,9 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     checkpoint = ModelCheckpoint(f'models/{machine_type}_model.h5', monitor='val_loss', save_best_only=True)
 
     # Train model
-    # We pass the scaled sequences (X_train_scaled) to the model. The Flatten layer handles the 3D to 2D conversion inside Keras.
+    # X_train_scaled is now [n_samples, n_features], compatible with the FNN model
     history = model.fit(
-        X_train_scaled[:, :, :], y_train,  # Remove anomaly from input features
+        X_train_scaled, y_train, 
         epochs=epochs,
         batch_size=batch_size,
         validation_split=0.2,
@@ -159,20 +143,27 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     )
 
     # Evaluate model
-    loss, accuracy = model.evaluate(X_test_scaled[:, :, :], y_test, verbose=0)
+    loss, accuracy = model.evaluate(X_test_scaled, y_test, verbose=0)
     print(f"Test Loss: {loss:.4f}, Test Accuracy: {accuracy:.4f}")
+    
+    # Further evaluation with classification report
+    y_pred_proba = model.predict(X_test_scaled, verbose=0)
+    y_pred = (y_pred_proba > 0.5).astype(int)
+    print("\nClassification Report:")
+    print(classification_report(y_test, y_pred))
 
     # Save scaler
     joblib.dump(scaler, f'models/{machine_type}_scaler.pkl')
 
     # Save model info
+    # We set seq_length to 1 to signify single-sample/point-in-time prediction
     model_info = {
         'machine_type': machine_type,
-        'seq_length': seq_length,
+        'seq_length': 1, # Set to 1 for point-in-time classification
         'accuracy': accuracy,
         'loss': loss,
-        'model_type': 'DNN_FFN', # Updated model type
-        'features': features[:-1]  # Exclude anomaly
+        'model_type': 'FNN_PointInTime', # Updated model type
+        'features': features
     }
 
     joblib.dump(model_info, f'models/{machine_type}_info.pkl')
@@ -181,27 +172,29 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     return model, scaler, model_info
 
 def main():
-    parser = argparse.ArgumentParser(description='Train ML model for machine monitoring')
-    parser.add_argument('--machine_type', type=str, required=True,
-                       help='Type of machine (pump, motor, conveyor, etc.)')
-    parser.add_argument('--seq_length', type=int, default=50,
-                       help='Sequence length for DNN')
-    parser.add_argument('--epochs', type=int, default=50,
-                       help='Number of training epochs')
-
-    args = parser.parse_args()
+    # Helper to allow running without command line args for testing
+    if len(sys.argv) == 1:
+        # No arguments provided, default to 'pump' for demonstration
+        print("Using default machine_type='pump' for demonstration. Run with --machine_type <type> to specify.")
+        args = argparse.Namespace(machine_type='pump', seq_length=1, epochs=50)
+    else:
+        parser = argparse.ArgumentParser(description='Train ML model for machine monitoring')
+        parser.add_argument('--machine_type', type=str, required=True,
+                           help='Type of machine (pump, motor, conveyor, etc.)')
+        parser.add_argument('--seq_length', type=int, default=1, # Default to 1 for point-in-time
+                           help='Sequence length (set to 1 for point-in-time classification)')
+        parser.add_argument('--epochs', type=int, default=50,
+                           help='Number of training epochs')
+        args = parser.parse_args()
     
     # --- GPU Configuration: Check for and configure GPU use ---
     gpus = tf.config.experimental.list_physical_devices('GPU')
     if gpus:
         try:
-            # Restrict TensorFlow to only use the first GPU
             tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
-            # Enable memory growth to avoid allocating all GPU memory at once
             tf.config.experimental.set_memory_growth(gpus[0], True)
             print("--- GPU detected and configured for training. ---")
         except RuntimeError as e:
-            # Visible devices must be set before GPUs have been initialized
             print(f"Runtime error during GPU setup: {e}")
     else:
         print("--- No GPU detected. Training will run on CPU. ---")
@@ -211,9 +204,10 @@ def main():
     os.makedirs('models', exist_ok=True)
 
     # Train model
+    # Note: seq_length is now effectively ignored or fixed at 1 for this architecture
     model, scaler, info = train_model(args.machine_type, args.seq_length, args.epochs)
 
-    print(f"Training completed for {args.machine_type}")
+    print(f"\nTraining completed for {args.machine_type}")
     print(f"Model saved as: models/{args.machine_type}_model.h5")
     print(f"Scaler saved as: models/{args.machine_type}_scaler.pkl")
     print(f"Model info saved as: models/{args.machine_type}_info.pkl")

@@ -577,6 +577,109 @@ async function createAlert(machineId, type, message, severity) {
   }
 }
 
+/**
+ * Helper function to generate normally distributed random numbers (Gaussian)
+ * using the Box-Muller transform, which is essential for matching the
+ * distribution of np.random.normal() from the Python code.
+ */
+function randn(mu = 0, sigma = 1) {
+    let u = 0, v = 0;
+    // Converting [0,1) to (0,1)
+    while(u === 0) u = Math.random();
+    while(v === 0) v = Math.random();
+    // Box-Muller transform
+    const z0 = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    return z0 * sigma + mu;
+}
+
+/**
+ * Generates a single, realistic sensor data point for a specific machine.
+ * This function handles all statistical complexity (base values, noise,
+ * and anomalies) and returns a fully structured object ready for insertion.
+ *
+ * @param {string} machineId - The ID of the machine.
+ * @param {string} machineType - The type of machine ('pump', 'motor', 'conveyor', or default).
+ * @returns {Object} A single sensor data reading object.
+ */
+function generateSingleReading(machineId, machineType) {
+    // --- Step 1: Set Base Parameters ---
+    let base_temp, base_vib, base_press, base_flow, base_rot;
+
+    if (machineType === 'pump') {
+        base_temp = 25;
+        base_vib = 2;
+        base_press = 2;
+        base_flow = 15;
+        base_rot = 1500;
+    } else if (machineType === 'motor') {
+        base_temp = 30;
+        base_vib = 1.5;
+        base_press = 1;
+        base_flow = 10;
+        base_rot = 1800;
+    } else if (machineType === 'conveyor') {
+        base_temp = 20;
+        base_vib = 3;
+        base_press = 0.5;
+        base_flow = 5;
+        base_rot = 1000;
+    } else { // default
+        base_temp = 25;
+        base_vib = 2;
+        base_press = 1.5;
+        base_flow = 12;
+        base_rot = 1200;
+    }
+
+    // Always run for the current time (i=0) for a single reading
+    const i = 0; 
+    const startDate = new Date(); 
+
+    // Generate timestamp
+    const timestamp = startDate.toISOString();
+
+    // Trends and Seasonality (both are 0 when i=0)
+    const trend = 0;
+    const seasonal = 0;
+
+    // Base Noise (Gaussian/Normal Distribution)
+    let noise_temp = randn(0, 2);
+    let noise_vib = randn(0, 0.5);
+    let noise_press = randn(0, 0.2);
+    let noise_flow = randn(0, 1);
+    let noise_rot = randn(0, 50);
+
+    // Anomalies (5% chance)
+    const anomaly = Math.random() < 0.05 ? 1 : 0;
+
+    if (anomaly) {
+        noise_temp *= 5;
+        noise_vib *= 3;
+        noise_press *= 2;
+        noise_flow *= 2;
+        noise_rot *= 2;
+    }
+
+    // Final calculation (ensuring non-negative values)
+    const vibration = Math.max(0, base_vib + trend + seasonal + noise_vib);
+    const temperature = Math.max(0, base_temp + trend + seasonal + noise_temp);
+    const pressure = Math.max(0, base_press + trend + seasonal + noise_press);
+    const flow_rate = Math.max(0, base_flow + trend + seasonal + noise_flow);
+    const rotational_speed = Math.max(0, base_rot + trend + seasonal + noise_rot);
+
+    // Return the single structured data object
+    return {
+        machine_id: machineId,
+        timestamp: timestamp,
+        vibration: parseFloat(vibration.toFixed(3)),
+        temperature: parseFloat(temperature.toFixed(3)),
+        pressure: parseFloat(pressure.toFixed(3)),
+        flow_rate: parseFloat(flow_rate.toFixed(3)),
+        rotational_speed: parseFloat(rotational_speed.toFixed(3)),
+        anomaly: anomaly
+    };
+}
+
 // Scheduled sensor data collection (every 5 seconds)
 cron.schedule('*/5 * * * * *', async () => {
   try{
@@ -587,14 +690,7 @@ cron.schedule('*/5 * * * * *', async () => {
 
     for (const machine of machines) {
       // Simulate sensor data collection
-      const sensorData = {
-        machine_id: machine.id,
-        vibration: Math.random() * 10,
-        temperature: 20 + Math.random() * 30,
-        pressure: 1 + Math.random() * 5,
-        flow_rate: 10 + Math.random() * 20,
-        rotational_speed: 1000 + Math.random() * 2000,
-      };
+      const sensorData = generateSingleReading(machine.id, machine.type);
 
       // Insert sensor data
       const sensorResult = await pool.query(

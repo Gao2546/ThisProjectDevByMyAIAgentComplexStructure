@@ -4,6 +4,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 import os
 import logging
+import json # Import json for main block usage
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -39,7 +40,7 @@ class ModelPredictor:
                 try:
                     # Load model
                     model_path = os.path.join(self.model_dir, file)
-                    self.models[machine_type] = load_model(model_path)
+                    self.models[machine_type] = load_model(model_path, compile=False) # compile=False speeds up loading
 
                     # Load scaler
                     scaler_path = os.path.join(self.model_dir, f'{machine_type}_scaler.pkl')
@@ -55,7 +56,7 @@ class ModelPredictor:
 
     def predict(self, sensor_data, machine_type, recent_history=None):
         """
-        Make prediction for sensor data using a sequence-based DNN model.
+        Make prediction for sensor data using either a sequence-based or point-in-time model.
 
         Args:
             sensor_data: dict with keys: vibration, temperature, pressure, flow_rate, rotational_speed
@@ -69,6 +70,7 @@ class ModelPredictor:
             available_types = list(self.models.keys())
             if available_types:
                 # Use the first available model if the requested one is not found
+                # NOTE: This fallback might use an incompatible model, but it prevents a crash.
                 machine_type = available_types[0]
                 logger.warning(f"Model for requested type '{machine_type}' not found, using '{machine_type}'")
             else:
@@ -85,43 +87,48 @@ class ModelPredictor:
             model_info = self.model_infos[machine_type]
 
             features = model_info['features']
-            seq_length = model_info['seq_length']
+            seq_length = model_info.get('seq_length', 1) # Default to 1 if missing for safety
+            n_features = len(features)
 
-            # --- 1. Prepare sequence data (3D array: seq_length, n_features) ---
-            if recent_history is None or len(recent_history) < seq_length:
-                # Fallback: create a sequence by repeating the current observation
-                logger.warning(f"Not enough history ({len(recent_history or [])}/{seq_length}). Repeating current sample.")
-                
-                # Current sample as a 1D array
-                current_sample_flat = np.array([[sensor_data.get(feature, 0) for feature in features]])
-                
-                # Repeat it to create the sequence (seq_length, n_features)
-                sequence_data = np.tile(current_sample_flat, (seq_length, 1))
+            # --- 1. Prepare sequence data (Shape: seq_length, n_features) ---
+            if seq_length > 1:
+                # Sequence Model Logic (for LSTM/RNN/Sequence DNN)
+                if recent_history is None or len(recent_history) < seq_length:
+                    # Fallback: create a sequence by repeating the current observation
+                    logger.warning(f"Not enough history ({len(recent_history or [])}/{seq_length}). Repeating current sample.")
+                    
+                    current_sample_flat = np.array([[sensor_data.get(feature, 0) for feature in features]])
+                    sequence_data = np.tile(current_sample_flat, (seq_length, 1))
+                else:
+                    # Use recent history (last seq_length observations)
+                    history_data = []
+                    full_history = recent_history + [sensor_data]
+                    
+                    for hist_point in full_history[-seq_length:]:
+                        point_features = [hist_point.get(feature, 0) for feature in features]
+                        history_data.append(point_features)
+                    
+                    sequence_data = np.array(history_data)
             else:
-                # Use recent history (last seq_length observations)
-                
-                # Extract features from history for the last seq_length points
-                history_data = []
-                # Combine history with the current sample for the prediction
-                full_history = recent_history + [sensor_data]
-                
-                for hist_point in full_history[-seq_length:]:
-                    # Ensure all features are present, use 0 or a sensible default if missing
-                    point_features = [hist_point.get(feature, 0) for feature in features]
-                    history_data.append(point_features)
-                
-                # sequence_data is now (seq_length, n_features)
-                sequence_data = np.array(history_data)
+                # Point-in-Time Model Logic (for FNN)
+                # sequence_data is just the current sample, (1, n_features)
+                sequence_data = np.array([[sensor_data.get(feature, 0) for feature in features]])
 
-            # --- 2. Scale the entire sequence ---
-            # Reshape the 3D sequence_data to 2D for scaling: (seq_length * n_features)
-            sequence_data_2d = sequence_data.reshape(-1, len(features))
-            sequence_scaled_2d = scaler.transform(sequence_data_2d)
+
+            # --- 2. Scale the data ---
+            # sequence_data is always 2D here: (seq_length, n_features) or (1, n_features)
+            sequence_scaled = scaler.transform(sequence_data)
             
-            # Reshape back to the required 3D input format: (1, seq_length, n_features)
-            sequence_input = sequence_scaled_2d.reshape(1, seq_length, len(features))
+            # --- 3. Prepare final input shape for Keras model ---
+            if seq_length > 1:
+                # 3D input: (batch_size, seq_length, n_features)
+                sequence_input = sequence_scaled.reshape(1, seq_length, n_features)
+            else:
+                # 2D input: (batch_size, n_features). This fixes the ValueError.
+                # sequence_scaled is already (1, n_features).
+                sequence_input = sequence_scaled 
 
-            # --- 3. Make prediction ---
+            # --- 4. Make prediction ---
             prediction = model.predict(sequence_input, verbose=0)
             anomaly_prob = float(prediction[0][0])
 
@@ -150,37 +157,27 @@ class ModelPredictor:
 def predict_anomaly(sensor_data, machine_type, recent_history=None):
     """
     Convenience function for making predictions
-
-    Args:
-        sensor_data: dict with sensor readings
-        machine_type: string
-        recent_history: list of recent readings
-
-    Returns:
-        dict: prediction results
     """
-    # Create the predictor inside the function to ensure models are loaded
-    # However, for efficiency in a real application, ModelPredictor should be initialized once 
-    # and reused across predictions.
-    predictor = ModelPredictor(model_dir="/models/models")
+    # Use './models' as the standard path where the training script saves files
+    predictor = ModelPredictor(model_dir="../models/models") 
     return predictor.predict(sensor_data, machine_type, recent_history)
 
 
 if __name__ == "__main__":
     import sys
-    import json
     
     # Simple mock data for demonstration purposes
+    # Set history length to satisfy a potential seq_length=50 model, but use a machine
+    # type ('pump_fnn') that should have seq_length=1 in its info file.
     mock_history = [
         {'vibration': 2.0, 'temperature': 25.0, 'pressure': 1.9, 'flow_rate': 15.0, 'rotational_speed': 1500.0}
-    ] * 49 # Mock 49 points of stable history
+    ] * 49 
 
     if len(sys.argv) > 2:
         # Command line usage
         sensor_data = json.loads(sys.argv[1])
         machine_type = sys.argv[2]
         
-        # Note: Command line usage doesn't easily support passing 'recent_history'
         result = predict_anomaly(sensor_data, machine_type)
         print(json.dumps(result))
     else:
@@ -193,14 +190,16 @@ if __name__ == "__main__":
             'rotational_speed': 1520.0
         }
         
-        # Test 1: With insufficient history (will use the repeating sample logic)
-        print("--- Test 1: Insufficient History ---")
-        result_no_history = predict_anomaly(sample_data, 'pump', recent_history=mock_history[:10])
-        print("Prediction result (No History):", result_no_history)
+        # NOTE: To test the fix, you must have trained a 'pump' model 
+        # using the last script (which sets seq_length=1).
+        print("--- Testing Point-in-Time FNN Model (Requires 'pump' model with seq_length=1) ---")
         
-        # Test 2: With sufficient history
-        print("\n--- Test 2: Sufficient History ---")
-        # Ensure 'pump' model exists in 'models/' directory to run correctly
-        result_with_history = predict_anomaly(sample_data, 'pump', recent_history=mock_history)
-        print("Prediction result (With History):", result_with_history)
-        print(json.dumps(result_with_history))
+        # Since the model expects [batch, 5], we ignore history.
+        result_fnn = predict_anomaly(sample_data, 'pump', recent_history=None)
+        
+        print("Prediction result (FNN Model):", json.dumps(result_fnn, indent=4))
+        
+        print("\n--- Testing Sequence Model Logic (Only if a 'motor' model with seq_length>1 exists) ---")
+        # This will use the sequence path in the predict method.
+        result_seq_test = predict_anomaly(sample_data, 'motor', recent_history=mock_history)
+        print("Prediction result (Sequence Model Test):", json.dumps(result_seq_test, indent=4))
