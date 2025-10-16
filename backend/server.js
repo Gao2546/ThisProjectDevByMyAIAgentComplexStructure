@@ -519,7 +519,7 @@ Please provide insights, trends, and answer the specific query.`,
 async function callPredictionModel(sensorData, machineType) {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(__dirname, '../models/predict.py');
-    const pythonProcess = spawn('/opt/venv/python3', [scriptPath, JSON.stringify(sensorData), machineType]);
+    const pythonProcess = spawn('/opt/venv/bin/python3', [scriptPath, JSON.stringify(sensorData), machineType]);
 
     let stdout = '';
     let stderr = '';
@@ -536,6 +536,7 @@ async function callPredictionModel(sensorData, machineType) {
       if (code === 0) {
         try {
           const result = JSON.parse(stdout.trim());
+          logger.info("Prediction result:", result);
           resolve({
             result: {
               anomaly: result.anomaly,

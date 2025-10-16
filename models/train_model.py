@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -6,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, LSTM, Dropout
+from tensorflow.keras.layers import Dense, Flatten, Dropout # Added Flatten
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 import joblib
 import os
@@ -81,26 +80,31 @@ def generate_sample_data(machine_type, n_samples=10000):
     return pd.DataFrame(data)
 
 def create_sequences(data, seq_length=50):
-    """Create sequences for LSTM input"""
+    """Create sequences for model input"""
     sequences = []
     targets = []
 
+    # Iterate through the data to create overlapping sequences
     for i in range(len(data) - seq_length):
         seq = data[i:i+seq_length, :-1]  # All columns except anomaly
-        target = data[i+seq_length, -1]  # Anomaly label
+        target = data[i+seq_length, -1]  # Anomaly label at the prediction step
         sequences.append(seq)
         targets.append(target)
 
     return np.array(sequences), np.array(targets)
 
-def build_lstm_model(input_shape):
-    """Build LSTM model for anomaly detection"""
+def build_dnn_model(input_shape):
+    """Build a classical Deep Neural Network (DNN) model for anomaly detection
+       It uses a Flatten layer to handle the sequence input structure."""
+    
+    # Input shape is (seq_length, n_features). Flatten converts this to (seq_length * n_features)
     model = Sequential([
-        LSTM(64, input_shape=input_shape, return_sequences=True),
-        Dropout(0.2),
-        LSTM(32, return_sequences=False),
-        Dropout(0.2),
-        Dense(16, activation='relu'),
+        Flatten(input_shape=input_shape), # Flattens the time sequences into a single feature vector
+        Dense(128, activation='relu'),
+        Dropout(0.3),
+        Dense(64, activation='relu'),
+        Dropout(0.3),
+        Dense(32, activation='relu'),
         Dense(1, activation='sigmoid')  # Binary classification for anomaly
     ])
 
@@ -109,7 +113,7 @@ def build_lstm_model(input_shape):
 
 def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     """Train model for specific machine type"""
-    print(f"Training model for {machine_type}...")
+    print(f"Training DNN model for {machine_type}...")
 
     # Generate sample data
     data = generate_sample_data(machine_type)
@@ -124,24 +128,29 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Scale features
+    # --- Scaling Features (Applied across features in the sequence) ---
     scaler = StandardScaler()
+    # Reshape (n_samples, seq_length, n_features) -> (n_samples * seq_length, n_features) for scaling
     X_train_reshaped = X_train.reshape(-1, X_train.shape[2])
     X_test_reshaped = X_test.reshape(-1, X_test.shape[2])
 
     X_train_scaled = scaler.fit_transform(X_train_reshaped).reshape(X_train.shape)
     X_test_scaled = scaler.transform(X_test_reshaped).reshape(X_test.shape)
+    # -----------------------------------------------------------------
 
-    # Build model
-    model = build_lstm_model((seq_length, X.shape[2] - 1))  # -1 because we remove anomaly from input
+    # Build model using the new DNN architecture
+    # Input shape is (seq_length, n_features - 1) for the Flatten layer
+    input_shape = (seq_length, X.shape[2])
+    model = build_dnn_model(input_shape)
 
     # Callbacks
     early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
     checkpoint = ModelCheckpoint(f'models/{machine_type}_model.h5', monitor='val_loss', save_best_only=True)
 
     # Train model
+    # We pass the scaled sequences (X_train_scaled) to the model. The Flatten layer handles the 3D to 2D conversion inside Keras.
     history = model.fit(
-        X_train_scaled[:, :, :-1], y_train,  # Remove anomaly from input features
+        X_train_scaled[:, :, :], y_train,  # Remove anomaly from input features
         epochs=epochs,
         batch_size=batch_size,
         validation_split=0.2,
@@ -150,7 +159,7 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
     )
 
     # Evaluate model
-    loss, accuracy = model.evaluate(X_test_scaled[:, :, :-1], y_test, verbose=0)
+    loss, accuracy = model.evaluate(X_test_scaled[:, :, :], y_test, verbose=0)
     print(f"Test Loss: {loss:.4f}, Test Accuracy: {accuracy:.4f}")
 
     # Save scaler
@@ -162,6 +171,7 @@ def train_model(machine_type, seq_length=50, epochs=50, batch_size=32):
         'seq_length': seq_length,
         'accuracy': accuracy,
         'loss': loss,
+        'model_type': 'DNN_FFN', # Updated model type
         'features': features[:-1]  # Exclude anomaly
     }
 
@@ -175,11 +185,27 @@ def main():
     parser.add_argument('--machine_type', type=str, required=True,
                        help='Type of machine (pump, motor, conveyor, etc.)')
     parser.add_argument('--seq_length', type=int, default=50,
-                       help='Sequence length for LSTM')
+                       help='Sequence length for DNN')
     parser.add_argument('--epochs', type=int, default=50,
                        help='Number of training epochs')
 
     args = parser.parse_args()
+    
+    # --- GPU Configuration: Check for and configure GPU use ---
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            # Restrict TensorFlow to only use the first GPU
+            tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
+            # Enable memory growth to avoid allocating all GPU memory at once
+            tf.config.experimental.set_memory_growth(gpus[0], True)
+            print("--- GPU detected and configured for training. ---")
+        except RuntimeError as e:
+            # Visible devices must be set before GPUs have been initialized
+            print(f"Runtime error during GPU setup: {e}")
+    else:
+        print("--- No GPU detected. Training will run on CPU. ---")
+    # ---------------------------------------------------------
 
     # Create models directory if it doesn't exist
     os.makedirs('models', exist_ok=True)

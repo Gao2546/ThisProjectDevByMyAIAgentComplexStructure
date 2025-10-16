@@ -1,4 +1,3 @@
-
 import numpy as np
 import joblib
 import tensorflow as tf
@@ -19,6 +18,17 @@ class ModelPredictor:
 
     def load_models(self):
         """Load all available models"""
+        # --- TensorFlow GPU Configuration (for fast prediction) ---
+        gpus = tf.config.experimental.list_physical_devices('GPU')
+        if gpus:
+            try:
+                tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
+                tf.config.experimental.set_memory_growth(gpus[0], True)
+                logger.info("GPU detected and configured for prediction.")
+            except RuntimeError as e:
+                logger.error(f"Runtime error during GPU setup: {e}")
+        # ---------------------------------------------------------
+        
         if not os.path.exists(self.model_dir):
             logger.warning(f"Model directory {self.model_dir} does not exist")
             return
@@ -39,13 +49,13 @@ class ModelPredictor:
                     info_path = os.path.join(self.model_dir, f'{machine_type}_info.pkl')
                     self.model_infos[machine_type] = joblib.load(info_path)
 
-                    logger.info(f"Loaded model for {machine_type}")
+                    logger.info(f"Loaded model for {machine_type} (Type: {self.model_infos[machine_type].get('model_type', 'unknown')})")
                 except Exception as e:
                     logger.error(f"Error loading model for {machine_type}: {e}")
 
     def predict(self, sensor_data, machine_type, recent_history=None):
         """
-        Make prediction for sensor data
+        Make prediction for sensor data using a sequence-based DNN model.
 
         Args:
             sensor_data: dict with keys: vibration, temperature, pressure, flow_rate, rotational_speed
@@ -56,11 +66,11 @@ class ModelPredictor:
             dict: prediction results
         """
         if machine_type not in self.models:
-            # Fallback to default model or raise error
             available_types = list(self.models.keys())
             if available_types:
+                # Use the first available model if the requested one is not found
                 machine_type = available_types[0]
-                logger.warning(f"Model for {machine_type} not found, using {machine_type}")
+                logger.warning(f"Model for requested type '{machine_type}' not found, using '{machine_type}'")
             else:
                 return {
                     'anomaly': False,
@@ -74,33 +84,45 @@ class ModelPredictor:
             scaler = self.scalers[machine_type]
             model_info = self.model_infos[machine_type]
 
-            # Prepare input data
             features = model_info['features']
-            input_data = np.array([[sensor_data[feature] for feature in features]])
-
-            # Scale input
-            input_scaled = scaler.transform(input_data)
-
-            # For LSTM, we need sequence data
             seq_length = model_info['seq_length']
 
+            # --- 1. Prepare sequence data (3D array: seq_length, n_features) ---
             if recent_history is None or len(recent_history) < seq_length:
-                # If no history, repeat current data to create sequence
-                sequence = np.tile(input_scaled, (seq_length, 1))
+                # Fallback: create a sequence by repeating the current observation
+                logger.warning(f"Not enough history ({len(recent_history or [])}/{seq_length}). Repeating current sample.")
+                
+                # Current sample as a 1D array
+                current_sample_flat = np.array([[sensor_data.get(feature, 0) for feature in features]])
+                
+                # Repeat it to create the sequence (seq_length, n_features)
+                sequence_data = np.tile(current_sample_flat, (seq_length, 1))
             else:
-                # Use recent history
+                # Use recent history (last seq_length observations)
+                
+                # Extract features from history for the last seq_length points
                 history_data = []
-                for hist in recent_history[-seq_length:]:
-                    hist_features = [hist.get(feature, sensor_data[feature]) for feature in features]
-                    history_data.append(hist_features)
-                sequence = np.array(history_data)
-                sequence = scaler.transform(sequence)
+                # Combine history with the current sample for the prediction
+                full_history = recent_history + [sensor_data]
+                
+                for hist_point in full_history[-seq_length:]:
+                    # Ensure all features are present, use 0 or a sensible default if missing
+                    point_features = [hist_point.get(feature, 0) for feature in features]
+                    history_data.append(point_features)
+                
+                # sequence_data is now (seq_length, n_features)
+                sequence_data = np.array(history_data)
 
-            # Reshape for LSTM input
-            sequence = sequence.reshape(1, seq_length, len(features))
+            # --- 2. Scale the entire sequence ---
+            # Reshape the 3D sequence_data to 2D for scaling: (seq_length * n_features)
+            sequence_data_2d = sequence_data.reshape(-1, len(features))
+            sequence_scaled_2d = scaler.transform(sequence_data_2d)
+            
+            # Reshape back to the required 3D input format: (1, seq_length, n_features)
+            sequence_input = sequence_scaled_2d.reshape(1, seq_length, len(features))
 
-            # Make prediction
-            prediction = model.predict(sequence, verbose=0)
+            # --- 3. Make prediction ---
+            prediction = model.predict(sequence_input, verbose=0)
             anomaly_prob = float(prediction[0][0])
 
             # Determine anomaly (threshold at 0.5)
@@ -112,7 +134,8 @@ class ModelPredictor:
                 'confidence': confidence,
                 'anomaly_probability': anomaly_prob,
                 'model_version': f"v1.0_{machine_type}",
-                'predicted_value': sensor_data.get('temperature', 0) + np.random.normal(0, 2)  # Mock prediction
+                'model_type': model_info.get('model_type', 'unknown'),
+                'features_used': features
             }
 
         except Exception as e:
@@ -136,7 +159,10 @@ def predict_anomaly(sensor_data, machine_type, recent_history=None):
     Returns:
         dict: prediction results
     """
-    predictor = ModelPredictor()
+    # Create the predictor inside the function to ensure models are loaded
+    # However, for efficiency in a real application, ModelPredictor should be initialized once 
+    # and reused across predictions.
+    predictor = ModelPredictor(model_dir="/models/models")
     return predictor.predict(sensor_data, machine_type, recent_history)
 
 
@@ -144,13 +170,21 @@ if __name__ == "__main__":
     import sys
     import json
     
+    # Simple mock data for demonstration purposes
+    mock_history = [
+        {'vibration': 2.0, 'temperature': 25.0, 'pressure': 1.9, 'flow_rate': 15.0, 'rotational_speed': 1500.0}
+    ] * 49 # Mock 49 points of stable history
+
     if len(sys.argv) > 2:
+        # Command line usage
         sensor_data = json.loads(sys.argv[1])
         machine_type = sys.argv[2]
+        
+        # Note: Command line usage doesn't easily support passing 'recent_history'
         result = predict_anomaly(sensor_data, machine_type)
         print(json.dumps(result))
     else:
-        # Example usage
+        # Example usage (run with default arguments)
         sample_data = {
             'vibration': 2.5,
             'temperature': 28.0,
@@ -158,6 +192,15 @@ if __name__ == "__main__":
             'flow_rate': 15.5,
             'rotational_speed': 1520.0
         }
-    
-        result = predict_anomaly(sample_data, 'pump')
-        print("Prediction result:", result)
+        
+        # Test 1: With insufficient history (will use the repeating sample logic)
+        print("--- Test 1: Insufficient History ---")
+        result_no_history = predict_anomaly(sample_data, 'pump', recent_history=mock_history[:10])
+        print("Prediction result (No History):", result_no_history)
+        
+        # Test 2: With sufficient history
+        print("\n--- Test 2: Sufficient History ---")
+        # Ensure 'pump' model exists in 'models/' directory to run correctly
+        result_with_history = predict_anomaly(sample_data, 'pump', recent_history=mock_history)
+        print("Prediction result (With History):", result_with_history)
+        print(json.dumps(result_with_history))

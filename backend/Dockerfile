@@ -25,7 +25,7 @@ COPY ./backend/package*.json ./
 RUN npm install
 
 # Copy models directory
-COPY ./models ./models
+COPY ./models /models
 
 COPY . .
 
